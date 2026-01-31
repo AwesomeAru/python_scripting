@@ -1,0 +1,46 @@
+print("enter number of bits")
+n = int(input())
+
+#taking 1st number
+i = 0
+arr_a = []
+arr_b = []
+for i in range(n):
+    print("enter the", i, "bit")
+    bit = int(input())
+    arr_a.append(bit)
+print("the first number is:", arr_a)
+
+for i in range(n):
+    print("enter the", i, "bit for second number")
+    bit = int(input())
+    arr_b.append(bit)
+print("the second number is:", arr_b)
+
+arr_out = []
+
+for i in range(n):
+    i_place = (arr_a[i], arr_b[i])
+    match i_place:
+        case (0,0):
+            arr_out.append(1)
+        case (0,1) | (1,0) :
+            arr_out.append(1)
+        case (1,1):
+            arr_out.append(0)
+print("nand function value is:", arr_out)
+
+arr_out_nor =[]
+
+for i in range(n):
+    i_place = (arr_a[i], arr_b[i])
+    match i_place:
+        case (0,0):
+            arr_out_nor.append(1)
+        case (0,1) | (1,0) :
+            arr_out_nor.append(0)
+        case (1,1):
+            arr_out_nor.append(0)
+print("nor function value is:", arr_out_nor)
+
+
