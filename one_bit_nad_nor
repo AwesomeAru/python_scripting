@@ -1,0 +1,5 @@
+a = int(input("Enter A (0/1): "))
+b = int(input("Enter B (0/1): "))
+
+print("NAND output:", int(not (a and b)))
+print("NOR output:", int(not (a or b)))
