@@ -43,4 +43,28 @@ for i in range(n):
             arr_out_nor.append(0)
 print("nor function value is:", arr_out_nor)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+n = int(input("Enter number of bits: "))
+
+a = []
+b = []
+
+for i in range(n):
+    a.append(int(input(f"Enter A[{i}]: ")))
+
+for i in range(n):
+    b.append(int(input(f"Enter B[{i}]: ")))
+
+nand_out = []
+nor_out = []
+
+for i in range(n):
+    nand_out.append(int(not (a[i] and b[i])))
+    nor_out.append(int(not (a[i] or b[i])))
+
+print("A =", a)
+print("B =", b)
+print("NAND =", nand_out)
+print("NOR  =", nor_out)
 
