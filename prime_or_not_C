@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    scanf("%d", &n);
+
+    // Numbers less than or equal to 1 are not prime
+    if (n <= 1) {
+        printf("Number is not prime");
+        return 0;
+    }
+
+    // Check divisibility up to sqrt(n)
+    for (i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            printf("Number is not prime");
+            return 0;
+        }
+    }
+
+    printf("Number is prime");
+    return 0;
+}
